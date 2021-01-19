@@ -1,16 +1,16 @@
 <template>
-  <div id="app">
+  <div>
 
-    <div class="container">
+    <!-- <div class="container"> -->
     <Header></Header>
-    <div class="row p-3">
+    <div class="row p-4 main_container">
       <div class="col-12">
         <transition name="slide" mode="out-in">
           <router-view></router-view>
         </transition>
       </div>
     </div>
-    </div>
+    <!-- </div> -->
     
   </div>
 </template>
@@ -29,11 +29,18 @@ export default {
 </script>
 
 <style>
-body {
-  padding: 30px;
+
+:root {
+  --clr-text: #fff;
 }
+
+.main_container {
+  margin-top: 100px;
+}
+
 a {
   cursor: pointer;
+  text-decoration: none!important;
 }
 
 .slide-enter-active {
